@@ -7,7 +7,7 @@ let level = 0;
 let btns = ["yellow", "red", "purple", "green"];
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keypress", function () {
+document.addEventListener("touchstart", function () {
     if (started == false) {
         console.log("game started");
         started = true;
@@ -79,7 +79,8 @@ function btnPress() {
 
 let allBtns = document.querySelectorAll(".btn");
 for (btn of allBtns) {
-    btn.addEventListener("click", btnPress);
+    // btn.addEventListener("click", btnPress);
+    btn.addEventListener("touchstart", btnPress);
 }
 
 function reset() {
